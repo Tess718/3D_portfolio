@@ -10,6 +10,9 @@
     background-color: #000;
     z-index: 9999;
 }
+.loader{
+  text-align: center;
+}
 /* From Uiverse.io by andrew-demchenk0 */ 
 .glitch {
     position: relative;
