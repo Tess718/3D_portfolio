@@ -1,10 +1,14 @@
+import React, { Suspense, lazy } from 'react';
 import Button from '../components/Button'
 import SplashCursor from '../components/SplashCursor'
-import Robot from '../components/Robot'
+// import Robot from '../components/Robot'
+const Robot = lazy(() => import('../components/Robot'));
 import {words} from '../constants/index'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import Animatedcounter from '../components/Animatedcounter'
+import Lazyloader from '../components/Lazyloader';
+
 
 const Hero = () => {
   useGSAP(()=> {
@@ -66,7 +70,9 @@ const Hero = () => {
             </header>
             
                 <div className='hero-3d-layout max-sm:mt-[55%] max-sm:pb-[50%]'>
-                  <Robot />
+                  <Suspense fallback={<Lazyloader />}>
+                    <Robot />
+                  </Suspense>
                 </div>
         </div>
         <Animatedcounter/>

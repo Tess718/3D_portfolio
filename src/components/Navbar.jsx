@@ -42,7 +42,7 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="/Liasu-Teslim-Omobobola-Resume.pdf" download="" className="contact-btn group">
+        <a href="/Liasu-Teslim-Omobobola-Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-btn group">
           <div className="inner">
             <span>Resume</span>
           </div>

@@ -63,7 +63,7 @@ const ShowcaseSection = () => {
                     <div className="first-project-wrapper" ref={project1Ref}>
                         <div>
                             <a href="http://devtfitness.netlify.app/"  target="_blank">
-                            <img src="/images/project (7).png" className="object-contain" alt="Fitness platform" />
+                            <img src="/images/project (7).png" className="object-contain" alt="Fitness platform" loading="lazy" />
                             </a>
                         </div>
                         <div className="text-content">
@@ -77,15 +77,15 @@ const ShowcaseSection = () => {
                         <div className="project" ref={project2Ref}>
                             <div className=''>
                                 <a href="https://tswatchables.netlify.app/" target="_blanck">
-                                    <img src="/images/project.png" alt="Movie App" className='image-wrapper bg-[#ffe7eb] py-2' />
+                                    <img src="/images/project.png" alt="Movie App" className='image-wrapper bg-[#ffe7eb] py-2' loading="lazy" />
                                 </a>
                             </div>
                             <h2>Movie web App</h2>
                         </div>
                         <div className="project" ref={project3Ref}>
                             <div className='image-wrapper bg-[#ffe7eb] py-2'>
-                                <a href="https://tessgetlinked.netlify.app/">
-                                <img src="/images/preview.png" alt="Getlinked prehackathon" className='' />
+                                <a href="https://tessgetlinked.netlify.app/" target="_blank">
+                                <img src="/images/preview.png" alt="Getlinked prehackathon" loading="lazy" />
                                 </a>
                             </div>
                             <h2>Getlinked prehackathon</h2>
@@ -96,23 +96,23 @@ const ShowcaseSection = () => {
                     <div className='project'>
                         <div className="image-wrapper bg-[#ffe7eb] p-5 rounded-xl">
                             <a href="https://fe-mal.netlify.app" target="_blank">
-                                <img src="/images/project (2).png" className=' object-fill' alt="Ecommerce" />
+                                <img src="/images/project (2).png" className=' object-fill' alt="Ecommerce" loading="lazy" />
                             </a>
                         </div>
                         <p className="py-5">'Fē,māl - Ecommerce Website</p>
                     </div>
                     <div className='project'>
                         <div className="image-wrapper bg-[#ffe7eb] p-5 rounded-xl">
-                            <a href="https://socialbook.netlify.app" target="_blank">
-                                <img src="/images/project (1).png" className=' object-fill' alt="Socialbook" />
+                            <a href="https://devtsocialbook.netlify.app" target="_blank">
+                                <img src="/images/project (1).png" className=' object-fill' alt="Socialbook" loading="lazy" />
                             </a>
                         </div>
                         <p className="py-5">Socialbook - Social Media web app</p>
                     </div>
                     <div className='project'>
                         <div className="image-wrapper bg-[#ffe7eb] p-5 rounded-xl">
-                            <a href="htpps://animately.netlify.app" target="_blank">
-                                <img src="/images/project (8).png" className=' object-fill' alt="Animately" />
+                            <a href="https://animately.netlify.app" target="_blank">
+                                <img src="/images/project (8).png" className=' object-fill' alt="Animately" loading="lazy" />
                             </a>
 
                         </div>
@@ -120,8 +120,8 @@ const ShowcaseSection = () => {
                     </div>
                     <div className='project'>
                         <div className="image-wrapper bg-[#ffe7eb] p-5 rounded-xl">
-                            <a href="https://neebo.netlify.app">
-                                <img src="/images/project (9).png" className=' object-fill' alt="Ecommerce" />
+                            <a href="https://neebo.netlify.app" target="_blank">
+                                <img src="/images/project (9).png"  className=' object-fill' alt="Ecommerce" loading="lazy" />
                             </a>
                         </div>
                         <p className="py-5">Neebo - AI assitant web app</p>

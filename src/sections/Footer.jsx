@@ -6,9 +6,11 @@ const Footer = () => {
       <div className="footer-container justify-between items-center">
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
-            </div>
+              <a href={socialImg.href} key={index} target="_blank" rel="noopener noreferrer">
+                <div className="icon">
+                  <img src={socialImg.imgPath} alt="social icon" />
+                </div>
+              </a>
           ))}
         </div>
         <div className="flex flex-col justify-center">

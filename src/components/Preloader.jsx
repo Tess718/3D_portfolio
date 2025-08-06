@@ -20,8 +20,8 @@ const Preloader = () => {
 
   return (
     <div className='loader-wrapper'>
-        <div class="loader">
-            <div data-glitch="Hello World!" class="glitch">Hello World!</div>
+        <div className="loader">
+            <div data-glitch="Hello World!" className="glitch">Hello World!</div>
         </div>
     </div>
   )

@@ -17,8 +17,8 @@
     "@react-three/postprocessing": "^3.0.4",
     "@splinetool/react-spline": "^4.0.0",
     "@tailwindcss/vite": "^4.1.4",
-    "aos": "^2.3.4",
     "gsap": "^3.12.7",
+    "lucide": "^0.536.0",
     "react": "^19.0.0",
     "react-bits": "^1.0.5",
     "react-countup": "^6.5.3",
@@ -37,6 +37,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "rollup-plugin-visualizer": "^6.0.3",
     "vite": "^6.3.1"
   }
 }

@@ -8,9 +8,6 @@ import Techstack from './sections/Techstack'
 import Contact from './sections/Contact'
 import Preloader from './components/Preloader'
 import Footer from './sections/Footer'
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 
 
@@ -18,12 +15,6 @@ import 'aos/dist/aos.css';
 
 
 const App = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 800, 
-      once: false,  
-    });
-  }, []);
   return (
     <div>
       <Preloader/>
@@ -35,6 +26,7 @@ const App = () => {
       <Techstack/>
       <Contact/>
       <Footer/>
+      
     </div>
   )
 }
