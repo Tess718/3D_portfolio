@@ -8,23 +8,15 @@ gsap.registerPlugin(ScrollTrigger)
 
 const ShowcaseSection = () => {
     const sectionRef = useRef(null)
-    const project1Ref = useRef(null)
-    const project2Ref = useRef(null)
-    const project3Ref = useRef(null)
-
-    
     
     useGSAP(() => {
-
         gsap.fromTo(
             sectionRef.current,
             {opacity: 0}, 
             {opacity: 1, duration: 1.5}
         );
 
-        const projects = [project1Ref.current, project2Ref.current, project3Ref.current];
-
-        projects.forEach((card, index) => {
+        gsap.utils.toArray(".showcase-card").forEach((card, index) => {
             gsap.fromTo(
                 card,
                 {
@@ -45,7 +37,7 @@ const ShowcaseSection = () => {
               );
           });
 
-        }, []);
+        }, { scope: sectionRef });
 
         const [project, setproject] = useState(true)
 
@@ -60,7 +52,7 @@ const ShowcaseSection = () => {
 
             <div className='w-full'>
                 <div className="showcaselayout">
-                    <div className="first-project-wrapper" ref={project1Ref}>
+                    <div className="first-project-wrapper showcase-card">
                         <div>
                             <a href="http://devtfitness.netlify.app/"  target="_blank">
                             <img src="/images/project (7).png" className="object-contain" alt="Fitness platform" loading="lazy" />
@@ -74,7 +66,7 @@ const ShowcaseSection = () => {
                         </div>
                     </div>
                     <div className="project-list-wrapper overflow-hidden">
-                        <div className="project" ref={project2Ref}>
+                        <div className="project showcase-card">
                             <div className=''>
                                 <a href="https://tswatchables.netlify.app/" target="_blanck">
                                     <img src="/images/project.png" alt="Movie App" className='image-wrapper bg-[#ffe7eb] py-2' loading="lazy" />
@@ -82,7 +74,7 @@ const ShowcaseSection = () => {
                             </div>
                             <h2>Movie web App</h2>
                         </div>
-                        <div className="project" ref={project3Ref}>
+                        <div className="project showcase-card">
                             <div className='image-wrapper bg-[#ffe7eb] py-2'>
                                 <a href="https://tessgetlinked.netlify.app/" target="_blank">
                                 <img src="/images/preview.png" alt="Getlinked prehackathon" loading="lazy" />

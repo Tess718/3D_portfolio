@@ -146,9 +146,36 @@ const socialImgs = [
   },
   {
     name: "github",
-    imgPath: "/images/github.png",
+    imgPath: "https://png.pngtree.com/png-vector/20220923/ourmid/pngtree-github-logo-icon-png-image_6214544.png",
     href: "https://github.com/Tess718",
   },
+];
+
+const expCards = [
+  {
+  review: "Teslim brought a strong design sense and modern frontend skills to our projects, delivering clean, responsive interfaces that greatly enhanced usability and performance. His contributions played a key role in shipping on time and improving user satisfaction.",
+  logoPath: "/images/logo.png",
+  title: "Frontend Developer",
+  date: "September 2022 - March 2024",
+  responsibilities: [
+    "Built and maintained frontend features for projects like Pinleaf Real Estate and Nimelssa National.",
+    "Integrated RESTful APIs to enable real-time data flow and improved interactivity.",
+    "Implemented animations using GSAP and AOS, enhancing user engagement.",
+    "Ensured cross-browser compatibility and mobile responsiveness across all deliverables.",
+  ],
+},
+{
+  review: "Teslim led the frontend development of our logistics dashboard with impressive attention to detail and user experience. He delivered a clean, functional interface that made real-time tracking seamless for both admins and customers.",
+  logoPath: "/images/eportlogo1.png", 
+  title: "Frontend Developer (Contract)",
+  date: "December 2023 - Present",
+  responsibilities: [
+    "Developed user-friendly dashboards for both admin and customer interfaces using HTML, CSS, JavaScript, and Bootstrap.",
+    "Integrated third-party APIs for real-time shipment tracking and data updates.",
+    "Improved UX design, resulting in a 25% reduction in user support queries.",
+    "Collaborated with the team to ensure scalable and maintainable frontend architecture.",
+  ],
+}
 ];
 
 export {
@@ -158,6 +185,7 @@ export {
   counterItems,
   expLogos,
   socialImgs,
+  expCards,
   techStackImgs,
   navLinks,
 };

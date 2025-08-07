@@ -8,6 +8,7 @@ import Techstack from './sections/Techstack'
 import Contact from './sections/Contact'
 import Preloader from './components/Preloader'
 import Footer from './sections/Footer'
+import Experience from './sections/Experience'
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
       <ShowcaseSection/>
       <Aboutme/>
       <Featurecards/>
+      <Experience />
       <Techstack/>
       <Contact/>
       <Footer/>
