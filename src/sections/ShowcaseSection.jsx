@@ -117,7 +117,7 @@ const ShowcaseSection = () => {
                     </div>
                 </div>
                 <div className="flex justify-end">
-                    <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-zinc-900 hover:text-white" onClick={()=>{setproject(!project)}}>{ project ? 'See more' : 'See less'}</button>
+                    <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-[#2a2e2e] hover:text-white" onClick={()=>{setproject(!project)}}>{ project ? 'See more' : 'See less'}</button>
                 </div>
             </div>
         </div>

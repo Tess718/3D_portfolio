@@ -73,9 +73,9 @@ const Hero = () => {
                   </Suspense>
                 </div> */}
 
-                <div className='relative rounded-lg max-sm:w-full'>
+                <div className='relative rounded-lg w-full lg:w-fit'>
                   <div className="noisy"/>
-                  <img src="/images/tess.png" alt="dev Tess" className='lg:w-150 w-full rounded-lg h-100 object-cover object-top' />
+                  <img src="/images/tess.png" alt="dev Tess" className='lg:w-150 w-full rounded-lg h-100 md:h-full lg:h-100 object-cover object-top' />
                 </div>
         </div>
         <Animatedcounter/>

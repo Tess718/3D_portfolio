@@ -13,6 +13,7 @@ import Projects from './sections/Projects';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from '@studio-freight/lenis';
+import SmoothFollower from './components/SmoothFollower';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,7 @@ const App = () => {
       {!loading && (
         <div>
           <Navbar />
+          <SmoothFollower />
           <Hero />
           <Projects />
           <Aboutme />

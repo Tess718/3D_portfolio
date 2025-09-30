@@ -32,7 +32,7 @@
         if (index < stickyCards.length - 1) {
           ScrollTrigger.create({
             trigger: card,
-            start: isDesktop ? "top top" : "top 10%",
+            start: isDesktop ? "top top" : "top top",
             endTrigger: stickyCards[stickyCards.length - 1],
             end: "top top",
             pin: true,
@@ -72,14 +72,14 @@
 
       return <section id="work" className="sticky-cards max-sm:items-center" ref={container}>
           {StickyCardsData.map((cardData, index) => (
-              <div className="sticky-card md:p-20 p-4 lg:h-full h-[95svh]" key={index}>
-                  <div className="sticky-card-index lg:basis-[40%] py-10 lg:py-0">
-                      <h1 className="lg:text-8xl text-3xl font-semibold">({cardData.index})</h1>
+              <div className="sticky-card md:p-20 p-4 lg:h-full h-svh" key={index}>
+                  <div className="sticky-card-index lg:basis-[40%] py-13 lg:py-0">
+                      <h1 className="lg:text-8xl text-4xl font-semibold">({cardData.index})</h1>
                   </div>
                   <div className="sticky-card-content basis-[60%]">
                       <div className="sticky-card-content-wrapper">
                         <div className="flex items-center justify-between">
-                          <h1 className="sticky-card-header lg:text-5xl text-xl font-semibold">
+                          <h1 className="sticky-card-header lg:text-5xl text-2xl font-semibold">
                               {cardData.title}
                           </h1>
                           <a href={cardData.link} rel='noreferrer' target='_blank'>

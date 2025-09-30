@@ -15,7 +15,7 @@ const Preloader = () => {
 
   return (
     <motion.div
-      className="loader-wrapper relative h-dvh w-dvw grid place-content-center bg-black z-100 overflow-hidden"
+      className="md:px-20 px-4 relative h-dvh w-dvw grid place-content-center bg-[#2a2e2e] z-150 overflow-hidden"
       initial={{ y: 0 }}
       animate={{ y: 0 }}
       exit={{ y: "-100%", transition: { duration: 1, ease: "easeInOut" } }} 
@@ -27,11 +27,11 @@ const Preloader = () => {
           pauseDuration={1500}
           showCursor={true}
           cursorCharacter="█"
-          className="lg:text-[60px] md:text-5xl sm:text-5xl font-bold uppercase"
+          className="lg:text-[80px] md:text-4xl text-2xl font-bold uppercase text-start"
         />
       )}
 
-      <div className="absolute bottom-10 lg:right-20 right-10 lg:text-[150px] md:text-6xl text-6xl font-black text-white">
+      <div className="absolute bottom-10 lg:right-0 right-0 md:pe-20 pe-4 lg:text-[150px] md:text-9xl text-7xl font-black text-white">
         <CountUp end={100} duration={2} />
       </div>
     </motion.div>

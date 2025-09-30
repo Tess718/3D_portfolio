@@ -4,14 +4,14 @@
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
   --bg-sticky: #edf1e8;
-  --fg-sticky:  #18181b;
+  --fg-sticky: #2a2e2e;
 }
 
 html,
 body {
   width: 100dvw;
   overflow-x: hidden;
-  background-color: black;
+  background-color: #1a1c1b;
   color: white;
   font-family: "Mona Sans", sans-serif;
 }
@@ -98,7 +98,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center flex-col max-sm:pt-50 gap-20 lg:gap-0 lg:flex-row;
+    @apply relative z-10 xl:mt-20 lg:mt-20 mt-32 md:mt-58 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center flex-col max-sm:pt-50 gap-20 lg:gap-0 lg:flex-row;
   }
 
   .hero-text {
@@ -112,7 +112,7 @@ section {
   }
 
   .hero-badge {
-    @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
+    @apply bg-[#2a2e2e] border border-[#3a3e3e] py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
   .hero-3d-layout {
@@ -123,7 +123,7 @@ section {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
 
     &.scrolled {
-      @apply top-0 bg-black;
+      @apply top-0 bg-[#1a1c1b];
     }
 
     &.not-scrolled {
@@ -162,7 +162,7 @@ section {
       @apply flex;
 
       .inner {
-        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-black-50 transition-colors duration-300;
+        @apply px-5 py-2 rounded-lg bg-white text-black group-hover:bg-[#2a2e2e] transition-colors duration-300;
 
         span {
           @apply group-hover:text-white transition-colors duration-300;
@@ -224,7 +224,7 @@ section {
   }
 
   .cta-button {
-    @apply px-4 py-4 rounded-lg bg-black-200 flex justify-center items-center relative cursor-pointer overflow-hidden;
+    @apply px-4 py-4 rounded-lg bg-[#2a2e2e] flex justify-center items-center relative cursor-pointer overflow-hidden;
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
@@ -248,7 +248,7 @@ section {
   }
 
   .card-border {
-    @apply border border-black-50 bg-black-100;
+    @apply border bg-[#2a2e2e] border-[#3a3e3e];
   }
 
   .noisy {
@@ -264,11 +264,11 @@ section {
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-[#1a1c1b];
   }
 
   .timeline-logo {
-    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
+    @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border bg-[#2a2e2e] border-[#3a3e3e];
   }
 
   .exp-card-wrapper {
@@ -306,7 +306,7 @@ section {
 
     input,
     textarea {
-      @apply w-full px-4 py-4 md:text-base text-sm placeholder:text-blue-50 bg-blue-100 rounded-md;
+      @apply w-full px-4 py-4 md:text-base text-sm bg-[#555d58] placeholder:text-[#d0d5d2]  rounded-md resize-none outline-0;
     }
 
     a {
@@ -333,7 +333,7 @@ section {
       @apply flex items-center justify-center gap-5;
 
       .icon {
-        @apply border border-black-50 bg-black-100 flex justify-center items-center rounded-xl size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-black-50;
+        @apply border bg-[#2a2e2e] border-[#3a3e3e] flex justify-center items-center rounded-xl size-10 md:size-12 cursor-pointer transition-all duration-500 hover:bg-[#3a3e3e];
       }
 
       img {
@@ -519,7 +519,7 @@ section {
 } */
 
 .pin-spacer{
-  background-color: #000;
+  background-color: #1a1c1b;
 }
 
 .sticky-card::after {
@@ -528,7 +528,7 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(26, 28, 27, 0.5);
   opacity: var(--after-opacity, 0);
   transition: opacity 0.1s ease;
   pointer-events: none;
