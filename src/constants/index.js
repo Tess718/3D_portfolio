@@ -1,3 +1,5 @@
+
+
 const navLinks = [
   {
     name: "Projects",
@@ -91,12 +93,12 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "HTML",
-    imgPath: "/images/logos/html.png",
+    name: "Next.js",
+    imgPath: "/images/logos/nextjs.png",
   },
   {
-    name: "CSS",
-    imgPath: "/images/logos/css.png",
+    name: "Typescript",
+    imgPath: "/images/logos/typescript.png",
   },
   {
     name: "Javascript",
@@ -158,7 +160,7 @@ const expCards = [
   title: "Frontend Developer",
   date: "September 2022 - March 2024",
   responsibilities: [
-    "Built and maintained frontend features for projects like Pinleaf Real Estate and Nimelssa National.",
+    "Built and maintained frontend features for projects.",
     "Integrated RESTful APIs to enable real-time data flow and improved interactivity.",
     "Implemented animations using GSAP and AOS, enhancing user engagement.",
     "Ensured cross-browser compatibility and mobile responsiveness across all deliverables.",
@@ -178,6 +180,54 @@ const expCards = [
 }
 ];
 
+const StickyCardsData = [
+  {
+    index: '01',
+    title: 'Mojito Cocktails',
+    image: '/images/project (13).png',
+    description:
+    'A cocktail website built with Next.js and GSAP, featuring scroll-triggered animations that balance performance and style, creating a smooth, playful experience that keeps visitors engaged while exploring content.',
+    link: 'https://tscocktails.netlify.app',
+
+  },
+  {
+    index: '02',
+    title: 'AI SAAS',
+    image: '/images/project (11).png',
+    description:
+    'A React.js website designed to market SEO services. Smooth, scroll-triggered animations highlight key offerings, creating an engaging flow that keeps visitors focused on value and encourages conversion.',
+    link: 'https://devt-saas.netlify.app',
+
+  },
+  {
+    index: '03',
+    title: 'Watchables',
+    image: '/images/project.png',
+    description:
+    'A React.js and Appwrite web app using the TMDB API to browse, search, and save movies. Features include authentication, watchlists, recommendations, and a trending section powered by recurring searches.',
+    link: 'https://tswatchables.netlify.app',
+
+  },
+  {
+    index: '04',
+    title: 'Animately',
+    image: '/images/project (8).png',
+    description:
+    'A React.js website built to promote animation courses. Smooth, scroll-triggered animations guide visitors through the content, creating an engaging flow that reflects the creativity and energy of the subject.',
+    link: 'https://animately.netlify.app',
+
+  },
+  {
+    index: '05',
+    title: 'Hiresight',
+    image: '/images/project (12).png',
+    description:
+    'A React Router v7, Typescript and Puter.js app that scans resumes and provides actionable insights, helping users edit and improve their chances of landing job opportunities.',
+    link: 'https://hire-sight.netlify.app',
+
+  },
+]
+
 export {
   words,
   abilities,
@@ -188,4 +238,5 @@ export {
   expCards,
   techStackImgs,
   navLinks,
+  StickyCardsData
 };

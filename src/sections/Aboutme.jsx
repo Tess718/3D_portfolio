@@ -2,8 +2,10 @@ import React from 'react'
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Button from '../components/Button';
 import SplitType from 'split-type';
 import TitleHeader from '../components/TitleHeader';
+import Stack from './Stack';
 
 const Aboutme = () => {
 
@@ -41,9 +43,9 @@ const Aboutme = () => {
                 sub="👋 Who Am I?"
                 centered={false}
             />
-            <div className="flex justify-between items-center flex-col md:flex-row max-sm:gap-10 pt-5">
+            <div className="flex justify-between items-center flex-col lg:flex-row max-sm:gap-10 pt-5">
                 <div className='basis-[60%]'>
-                    <p className='text-2xl' ref={(el) => (splitTypesRef.current[0] = el)}>I am a dedicated web developer with over two years of hands-on experience, having honed my skills and gained valuable insights during my employment at Sunmence solutions. In this professional journey, I actively contributed to real-world projects, collaborating with talented teams to deliver cutting-edge solutions. My role included translating design concepts into efficient, responsive, and user-friendly websites. I thrive on problem-solving and enjoy the challenge of creating robust and scalable code.</p>
+                    <p className='text-2xl' ref={(el) => (splitTypesRef.current[0] = el)}>I am a dedicated web developer with over three years of hands-on experience, having honed my skills and gained valuable insights during my employment at Sunmence solutions. In this professional journey, I actively contributed to real-world projects, collaborating with talented teams to deliver cutting-edge solutions. My role included translating design concepts into efficient, responsive, and user-friendly websites. I thrive on problem-solving and enjoy the challenge of creating robust and scalable code.</p>
 
                     <a href="/Liasu-Teslim-Omobobola-Resume.pdf" download="">
                       <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-zinc-900 hover:text-white">Download Resume</button>

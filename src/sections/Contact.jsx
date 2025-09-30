@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useInView } from "framer-motion";
 
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/models/contact/ContactExperience";
@@ -12,6 +13,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { margin: "-50% 0px -50% 0px" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,6 +49,7 @@ const Contact = () => {
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
+           centered={true}
         />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
@@ -108,8 +113,12 @@ const Contact = () => {
             </div>
           </div>
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+            <div
+              ref={containerRef}
+              className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden"
+            >
+              {/* Conditionally render ContactExperience only when it's in view */}
+              {isInView && <ContactExperience />}
             </div>
           </div>
         </div>

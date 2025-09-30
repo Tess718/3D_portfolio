@@ -1,10 +1,7 @@
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import TitleHeader from "../components/TitleHeader";
-
-gsap.registerPlugin(ScrollTrigger)
 
 const ShowcaseSection = () => {
     const sectionRef = useRef(null)
@@ -31,7 +28,7 @@ const ShowcaseSection = () => {
                     scrollTrigger: {
                       trigger: card,
                       start: "top bottom-=100",
-                      toggleActions: "play reverse play reverse",
+                       toggleActions: "play none none none",
                     },
                   }
               );
