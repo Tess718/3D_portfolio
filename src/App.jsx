@@ -25,10 +25,14 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+    // Only initialize Lenis after loading is complete
+    if (loading) return;
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
+      smoothTouch: false,
     });
 
     let rafId;
@@ -38,15 +42,34 @@ const App = () => {
     }
     rafId = requestAnimationFrame(raf);
 
+    // Sync Lenis with ScrollTrigger
+    lenis.on('scroll', () => {
+      ScrollTrigger.update();
+    });
+
+    // Refresh ScrollTrigger after a brief delay to ensure DOM is ready
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
+      clearTimeout(refreshTimer);
       lenis.destroy();
     };
-  }, []);
+  }, [loading]); // Add loading as dependency
 
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence
+        mode="wait"
+        onExitComplete={() => {
+          // Recalc ScrollTrigger after preloader exits
+          setTimeout(() => {
+            ScrollTrigger.refresh();
+          }, 100);
+        }}
+      >
         {loading && <Preloader key="preloader" />}
       </AnimatePresence>
 
