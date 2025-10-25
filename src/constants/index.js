@@ -220,7 +220,7 @@ const StickyCardsData = [
   {
     index: '05',
     title: 'Hiresight',
-    image: '/images/project (12).png',
+    image: '/images/project (14).png',
     description:
     'A React Router v7, Typescript and Puter.js app that scans resumes and provides actionable insights, helping users edit and improve their chances of landing job opportunities.',
     link: 'https://hire-sight.netlify.app',

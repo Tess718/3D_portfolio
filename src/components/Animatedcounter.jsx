@@ -15,7 +15,7 @@ const Animatedcounter = () => {
               <CountUp
                 end={item.value}
                 suffix={item.suffix || ''}
-                duration={2}
+                duration={1}
                 enableScrollSpy
               />
             </div>

@@ -94,11 +94,11 @@ section {
   }
 
   .grid-12-cols {
-    @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
+    @apply grid grid-cols-1 xl:grid-cols-12 gap-10
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 lg:mt-20 mt-32 md:mt-58 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center flex-col max-sm:pt-50 gap-20 lg:gap-0 lg:flex-row;
+    @apply relative z-10 xl:mt-20 lg:mt-20 mt-32 md:mt-58 lg:py-25 max-sm:h-[80vh] flex xl:items-center items-start justify-center flex-col max-sm:pt-50 gap-20 lg:gap-0 lg:flex-row;
   }
 
   .hero-text {
@@ -228,7 +228,7 @@ section {
 
     .bg-circle {
       @apply absolute -right-10 origin-center top-1/2 -translate-y-1/2 
-        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10
+        w-[120%] h-[120%] group-hover:size-10 group-hover:right-10 max-sm:group-hover:right-5
         rounded-full bg-white-50 transition-all duration-500;
     }
 
@@ -238,8 +238,8 @@ section {
     }
 
     .arrow-wrapper {
-      @apply group-hover:bg-white-50 size-10 rounded-full absolute right-10 top-1/2 
-        -translate-y-1/2 flex justify-center items-center overflow-hidden;
+      @apply group-hover:bg-white-50 size-10 rounded-full absolute md:right-10 top-1/2 
+        -translate-y-1/2 flex justify-center items-center overflow-hidden right-5;
 
       img {
         @apply size-5 xl:-translate-y-32 translate-y-0 animate-bounce group-hover:translate-y-0 transition-all duration-500;

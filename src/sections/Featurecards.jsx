@@ -52,7 +52,7 @@ const Featurecards = () => {
 
   return (
     <>
-      <div className='w-full padding-x-lg mt-[10%]' ref={scrollRef}>
+      <div className='w-full padding-x-lg md:mt-40 mt-20' ref={scrollRef}>
         <div className="mx-auto grid-3-cols">
           {abilities.map(({ imgPath, title, desc }, index) => (
             <div 
