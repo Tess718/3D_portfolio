@@ -170,7 +170,7 @@ const expCards = [
   review: "Teslim led the frontend development of our logistics dashboard with impressive attention to detail and user experience. He delivered a clean, functional interface that made real-time tracking seamless for both admins and customers.",
   logoPath: "/images/eportlogo1.png", 
   title: "Frontend Developer (Contract)",
-  date: "December 2023 - Present",
+  date: "December 2023 - April 2025",
   responsibilities: [
     "Developed user-friendly dashboards for both admin and customer interfaces using HTML, CSS, JavaScript, and Bootstrap.",
     "Integrated third-party APIs for real-time shipment tracking and data updates.",

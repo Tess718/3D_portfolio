@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useInView } from "framer-motion";
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
+import ContactExperience from "../components/Models/contact/ContactExperience";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -86,11 +86,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message">Your Message</label>
+                  <label htmlFor="project">Your Message</label>
                   <textarea
-                    id="message"
-                    name="message"
-                    value={form.message}
+                    id="project"
+                    name="project"
+                    value={form.project}
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     rows="5"
