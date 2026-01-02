@@ -45,7 +45,7 @@ const Aboutme = () => {
                 <div className='basis-[60%]'>
                     <p className='md:text-2xl text-lg' ref={(el) => (splitTypesRef.current[0] = el)}>I am a dedicated web developer with over three years of hands-on experience, having honed my skills and gained valuable insights during my employment at Sunmence solutions. In this professional journey, I actively contributed to real-world projects, collaborating with talented teams to deliver cutting-edge solutions. My role included translating design concepts into efficient, responsive, and user-friendly websites. I thrive on problem-solving and enjoy the challenge of creating robust and scalable code.</p>
 
-                    <a href="/Liasu-Teslim-Omobobola-Resume.pdf" download="">
+                    <a href="/Teslim-Liasu-Resume.pdf" download="">
                         {/* <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-[#2a2e2e] hover:text-white">Download Resume</button> */}
                         <button>
                         <div className="cta-button group md:w-80 w-60 mt-10">
