@@ -7,6 +7,21 @@ const NavBar = () => {
   // track if the user has scrolled down the page
   const [scrolled, setScrolled] = useState(false);
 
+  const handleLinkClick = (event, link) => {
+    const targetId = link.replace("#", "");
+    const target = document.getElementById(targetId);
+
+    if (!target) return;
+
+    event.preventDefault();
+
+    if (window.lenis) {
+      window.lenis.scrollTo(target);
+    } else {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   useEffect(() => {
     // create an event listener for when the user scrolls
     const handleScroll = () => {
@@ -26,7 +41,11 @@ const NavBar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <a href="#hero" className="logo">
+        <a
+          href="#hero"
+          className="logo"
+          onClick={(event) => handleLinkClick(event, "#hero")}
+        >
           Dev Tess
         </a>
 
@@ -34,7 +53,10 @@ const NavBar = () => {
           <ul>
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
-                <a href={link}>
+                <a
+                  href={link}
+                  onClick={(event) => handleLinkClick(event, link)}
+                >
                   <span>{name}</span>
                   <span className="underline" />
                 </a>
@@ -43,7 +65,12 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="/Teslim-Liasu-Resume.pdf" target="_blank" rel="noopener noreferrer" className="contact-btn group">
+        <a
+          href="/Teslim-Liasu-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-btn group"
+        >
           <div className="inner">
             <span>Resume</span>
           </div>
@@ -51,6 +78,6 @@ const NavBar = () => {
       </div>
     </header>
   );
-}
+};
 
 export default NavBar;

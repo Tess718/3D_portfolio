@@ -37,41 +37,6 @@ const counterItems = [
   { value: 100, suffix: "%", label: "Task Completion Rate" },
 ];
 
-const logoIconsList = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-5.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
-];
 
 const abilities = [
   {
@@ -155,83 +120,101 @@ const socialImgs = [
 
 const expCards = [
   {
-  review: "Teslim brought a strong design sense and modern frontend skills to our projects, delivering clean, responsive interfaces that greatly enhanced usability and performance. His contributions played a key role in shipping on time and improving user satisfaction.",
-  logoPath: "/images/logo.png",
-  title: "Frontend Developer",
-  date: "September 2022 - March 2024",
-  responsibilities: [
-    "Built and maintained frontend features for projects.",
-    "Integrated RESTful APIs to enable real-time data flow and improved interactivity.",
-    "Implemented animations using GSAP and AOS, enhancing user engagement.",
-    "Ensured cross-browser compatibility and mobile responsiveness across all deliverables.",
-  ],
-},
-{
-  review: "Teslim led the frontend development of our logistics dashboard with impressive attention to detail and user experience. He delivered a clean, functional interface that made real-time tracking seamless for both admins and customers.",
-  logoPath: "/images/eportlogo1.png", 
-  title: "Frontend Developer (Contract)",
-  date: "December 2023 - April 2025",
-  responsibilities: [
-    "Developed user-friendly dashboards for both admin and customer interfaces using HTML, CSS, JavaScript, and Bootstrap.",
-    "Integrated third-party APIs for real-time shipment tracking and data updates.",
-    "Improved UX design, resulting in a 25% reduction in user support queries.",
-    "Collaborated with the team to ensure scalable and maintainable frontend architecture.",
-  ],
-}
+    review:
+      "Teslim brought a strong design sense and modern frontend skills to our projects, delivering clean, responsive interfaces that greatly enhanced usability and performance. His contributions played a key role in shipping on time and improving user satisfaction.",
+    logoPath: "/images/logo.png",
+    title: "Frontend Developer",
+    date: "September 2022 - March 2024",
+    responsibilities: [
+      "Built and maintained frontend features for projects.",
+      "Integrated RESTful APIs to enable real-time data flow and improved interactivity.",
+      "Implemented animations using GSAP and AOS, enhancing user engagement.",
+      "Ensured cross-browser compatibility and mobile responsiveness across all deliverables.",
+    ],
+  },
+  {
+    review:
+      "Teslim led the frontend development of our logistics dashboard with impressive attention to detail and user experience. He delivered a clean, functional interface that made real-time tracking seamless for both admins and customers.",
+    logoPath: "/images/eportlogo1.png",
+    title: "Frontend Developer (Contract)",
+    date: "December 2023 - April 2025",
+    responsibilities: [
+      "Developed user-friendly dashboards for both admin and customer interfaces using HTML, CSS, JavaScript, and Bootstrap.",
+      "Integrated third-party APIs for real-time shipment tracking and data updates.",
+      "Improved UX design, resulting in a 25% reduction in user support queries.",
+      "Collaborated with the team to ensure scalable and maintainable frontend architecture.",
+    ],
+  },
+  {
+    review:
+      "Teslim continues to show incredible growth, consistently picking up advanced development patterns and applying them effectively to our projects. He approaches complex workflow improvements with a great learning attitude, delivering clean, reliable code that helps the team move faster.",
+    logoPath: "/images/katlogo.webp",
+    title: "Software Engineer",
+    date: "January 2026 - Present",
+    responsibilities: [
+      "Architected high-performance web applications using Next.js, React, and TypeScript, ensuring robust client-side performance and seamless user experiences.",
+      "Streamlined development workflows by driving the technical migration to a high-performance Turbo Monorepo architecture.",
+      "Designed and optimized full-stack data layers using Prisma ORM alongside MongoDB for scalable backend data management.",
+      "Containerized local development environments using Docker and docker-compose to ensure environment consistency across the engineering team.",
+      "Implemented comprehensive unit and integration testing suites with Jest to secure critical user flows and minimize production regressions.",
+    ],
+  },
 ];
 
 const StickyCardsData = [
   {
-    index: '01',
-    title: 'Mojito Cocktails',
-    image: '/images/project (13).png',
+    index: "01",
+    title: "Mojito Cocktails",
+    image: "/images/project (13).png",
     description:
-    'A cocktail website built with Next.js and GSAP, featuring scroll-triggered animations that balance performance and style, creating a smooth, playful experience that keeps visitors engaged while exploring content.',
-    link: 'https://tscocktails.netlify.app',
-
+      "A cocktail website built with Next.js and GSAP, featuring scroll-triggered animations that balance performance and style, creating a smooth, playful experience that keeps visitors engaged while exploring content.",
+    link: "https://tscocktails.netlify.app",
   },
   {
-    index: '02',
-    title: 'AI SAAS',
-    image: '/images/project (11).png',
+    index: "02",
+    title: "AI SAAS",
+    image: "/images/project (11).png",
     description:
-    'A React.js website designed to market SEO services. Smooth, scroll-triggered animations highlight key offerings, creating an engaging flow that keeps visitors focused on value and encourages conversion.',
-    link: 'https://devt-saas.netlify.app',
-
+      "A React.js website designed to market SEO services. Smooth, scroll-triggered animations highlight key offerings, creating an engaging flow that keeps visitors focused on value and encourages conversion.",
+    link: "https://devt-saas.netlify.app",
   },
   {
-    index: '03',
-    title: 'Watchables',
-    image: '/images/project.png',
+    index: "03",
+    title: "Watchables",
+    image: "/images/project.png",
     description:
-    'A React.js and Appwrite web app using the TMDB API to browse, search, and save movies. Features include authentication, watchlists, recommendations, and a trending section powered by recurring searches.',
-    link: 'https://tswatchables.netlify.app',
-
+      "A React.js and Appwrite web app using the TMDB API to browse, search, and save movies. Features include authentication, watchlists, recommendations, and a trending section powered by recurring searches.",
+    link: "https://tswatchables.netlify.app",
   },
   {
-    index: '04',
-    title: 'Animately',
-    image: '/images/project (8).png',
+    index: "04",
+    title: "Animately",
+    image: "/images/project (8).png",
     description:
-    'A React.js website built to promote animation courses. Smooth, scroll-triggered animations guide visitors through the content, creating an engaging flow that reflects the creativity and energy of the subject.',
-    link: 'https://animately.netlify.app',
-
+      "A React.js website built to promote animation courses. Smooth, scroll-triggered animations guide visitors through the content, creating an engaging flow that reflects the creativity and energy of the subject.",
+    link: "https://animately.netlify.app",
   },
   {
-    index: '05',
-    title: 'Hiresight',
-    image: '/images/project (14).png',
+    index: "05",
+    title: "Hiresight",
+    image: "/images/project (14).png",
     description:
-    'A React Router v7, Typescript and Puter.js app that scans resumes and provides actionable insights, helping users edit and improve their chances of landing job opportunities.',
-    link: 'https://hire-sight.netlify.app',
-
+      "A React Router v7, Typescript and Puter.js app that scans resumes and provides actionable insights, helping users edit and improve their chances of landing job opportunities.",
+    link: "https://hire-sight.netlify.app",
   },
-]
+  {
+    index: "06",
+    title: "The Olaoluwa Portfolio",
+    image: "/images/project (15).png",
+    description:
+      "A Next.js, TypeScript, Payload CMS, and MongoDB-powered portfolio platform with ImageKit integration, featuring microinteractions and smooth animated scrolling to create an immersive, responsive experience for showcasing photography work.",
+    link: "https://theolaoluwa.pxxl.run",
+  },
+];
 
 export {
   words,
   abilities,
-  logoIconsList,
   counterItems,
   expLogos,
   socialImgs,

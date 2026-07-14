@@ -1,21 +1,27 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import Hero from '../sections/Hero';
-import Preloader from '../components/Preloader';
-import Navbar from '../components/Navbar';
-import Aboutme from '../sections/Aboutme';
-import Featurecards from '../sections/Featurecards';
-import Techstack from '../sections/Techstack';
-import Contact from '../sections/Contact';
-import Footer from '../sections/Footer';
-import Experience from '../sections/Experience';
-import Projects from '../sections/Projects';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from '@studio-freight/lenis';
-import SmoothFollower from '../components/SmoothFollower';
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import Hero from "../sections/Hero";
+import Preloader from "../components/Preloader";
+import Navbar from "../components/Navbar";
+import Aboutme from "../sections/Aboutme";
+import Featurecards from "../sections/Featurecards";
+import Techstack from "../sections/Techstack";
+import Contact from "../sections/Contact";
+import Footer from "../sections/Footer";
+import Experience from "../sections/Experience";
+import Projects from "../sections/Projects";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "@studio-freight/lenis";
+import SmoothFollower from "../components/SmoothFollower";
+
+declare global {
+  interface Window {
+    lenis?: any;
+  }
+}
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -39,6 +45,10 @@ const Page = () => {
       smoothWheel: true,
     });
 
+    if (typeof window !== "undefined") {
+      window.lenis = lenis;
+    }
+
     let rafId: number;
     function raf(time: number) {
       lenis.raf(time);
@@ -47,7 +57,7 @@ const Page = () => {
     rafId = requestAnimationFrame(raf);
 
     // Sync Lenis with ScrollTrigger
-    lenis.on('scroll', () => {
+    lenis.on("scroll", () => {
       ScrollTrigger.update();
     });
 
@@ -59,6 +69,9 @@ const Page = () => {
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
       clearTimeout(refreshTimer);
+      if (typeof window !== "undefined") {
+        window.lenis = undefined;
+      }
       lenis.destroy();
     };
   }, [loading]); // Add loading as dependency
