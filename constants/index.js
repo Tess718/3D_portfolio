@@ -147,7 +147,7 @@ const expCards = [
   },
   {
     review:
-      "Teslim continues to show incredible growth, consistently picking up advanced development patterns and applying them effectively to our projects. He approaches complex workflow improvements with a great learning attitude, delivering clean, reliable code that helps the team move faster.",
+      "Teslim continues to show incredible growth,learning new development patterns and starting to apply them in his work. He approaches workflow challenges with a willingness to learn and contributes where he can while continuing to build his skills.",
     logoPath: "/images/katlogo.webp",
     title: "Software Engineer",
     date: "January 2026 - Present",
