@@ -208,7 +208,7 @@ const StickyCardsData = [
     image: "/images/project (15).png",
     description:
       "A Next.js, TypeScript, Payload CMS, and MongoDB-powered portfolio platform with ImageKit integration, featuring microinteractions and smooth animated scrolling to create an immersive, responsive experience for showcasing photography work.",
-    link: "https://theolaoluwa.pxxl.run",
+    link: "https://theolaoluwa.vercel.app",
   },
 ];
 
