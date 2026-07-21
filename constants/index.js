@@ -210,6 +210,14 @@ const StickyCardsData = [
       "A Next.js, TypeScript, Payload CMS, and MongoDB-powered portfolio platform with ImageKit integration, featuring microinteractions and smooth animated scrolling to create an immersive, responsive experience for showcasing photography work.",
     link: "https://theolaoluwa.vercel.app",
   },
+  {
+    index: "07",
+    title: "Klick",
+    image: "/images/project (16).png",
+    description:
+      "A Next.js, TypeScript, and PostgreSQL-powered URL shortener with Redis caching and Auth.js authentication, featuring geo/device tracking and real-time click analytics.",
+    link: "https://klixk.vercel.app",
+  },
 ];
 
 export {
