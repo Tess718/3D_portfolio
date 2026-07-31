@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import { trackEvent } from "@vercel/analytics";
+import { track } from "@vercel/analytics";
 import emailjs from "@emailjs/browser";
 import { useInView } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -46,14 +46,14 @@ const Contact = () => {
 
       setForm({ name: "", email: "", project: "" });
       setStatus("success");
-      trackEvent("contact_form_submit", { result: "success" });
+      track("contact_form_submit", { result: "success" });
 
       // Auto-hide the success message after 5 seconds
       setTimeout(() => setStatus(null), 5000);
     } catch (error) {
       console.error("EmailJS Error:", error);
       setStatus("error");
-      trackEvent("contact_form_submit", { result: "error" });
+      track("contact_form_submit", { result: "error" });
     } finally {
       setLoading(false);
     }

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { StickyCardsData } from "../../constants";
 import { useRef } from "react";
-import { trackEvent } from "@vercel/analytics";
+import { track } from "@vercel/analytics";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -99,7 +99,7 @@ const StickyCards = () => {
                   rel="noreferrer"
                   target="_blank"
                   onClick={() =>
-                    trackEvent("project_link_click", {
+                    track("project_link_click", {
                       project: cardData.title,
                       location: "projects",
                     })

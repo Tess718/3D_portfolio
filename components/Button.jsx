@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { trackEvent } from "@vercel/analytics";
+import { track } from "@vercel/analytics";
 /**
  * A reusable CTA button component.
  * When clicked, it scrolls smoothly to the section with ID "work",
@@ -13,7 +13,7 @@ const Button = ({ text, className, id, eventName, eventLabel }) => {
       onClick={(e) => {
         e.preventDefault(); // Stop the link from jumping instantly
 
-        trackEvent("cta_click", {
+        track("cta_click", {
           event: eventName || id || text,
           label: eventLabel || text,
         });

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRef, useEffect } from "react";
-import { trackEvent } from "@vercel/analytics";
+import { track } from "@vercel/analytics";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
@@ -66,9 +66,7 @@ const Aboutme = () => {
             <a
               href="/Teslim-Liasu-Resume.pdf"
               download=""
-              onClick={() =>
-                trackEvent("resume_download", { location: "about" })
-              }
+              onClick={() => track("resume_download", { location: "about" })}
             >
               {/* <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-[#2a2e2e] hover:text-white">Download Resume</button> */}
               <button>
