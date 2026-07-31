@@ -218,6 +218,14 @@ const StickyCardsData = [
       "A Next.js, TypeScript, and PostgreSQL-powered URL shortener with Redis caching and Auth.js authentication, featuring geo/device tracking and real-time click analytics.",
     link: "https://klixk.vercel.app",
   },
+  {
+    index: "08",
+    title: "Mentatry",
+    image: "/images/project (17).png",
+    description:
+      "A Next.js, TypeScript, PostgreSQL, and Prisma-powered quiz platform with AI integration, featuring live multiplayer rooms, real-time leaderboards, and a bold neo-brutalist design system to create a competitive, gamified experience for creating and hosting quizzes.",
+    link: "https://mentatry.vercel.app",
+  },
 ];
 
 export {
