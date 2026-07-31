@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import { trackEvent } from "@vercel/analytics";
 import emailjs from "@emailjs/browser";
 import { useInView } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -9,7 +10,7 @@ import TitleHeader from "../components/TitleHeader";
 // Lazy load the 3D component
 const ContactExperience = dynamic(
   () => import("../components/Models/contact/ContactExperience"),
-  { ssr: false }
+  { ssr: false },
 );
 
 const Contact = () => {
@@ -40,17 +41,19 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
         formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
       );
 
       setForm({ name: "", email: "", project: "" });
       setStatus("success");
+      trackEvent("contact_form_submit", { result: "success" });
 
       // Auto-hide the success message after 5 seconds
       setTimeout(() => setStatus(null), 5000);
     } catch (error) {
       console.error("EmailJS Error:", error);
       setStatus("error");
+      trackEvent("contact_form_submit", { result: "error" });
     } finally {
       setLoading(false);
     }
@@ -62,7 +65,7 @@ const Contact = () => {
         <TitleHeader
           title="Get in Touch – Let’s Connect"
           sub="💬 Have questions or ideas? Let’s talk! 🚀"
-           centered={true}
+          centered={true}
         />
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
@@ -118,17 +121,22 @@ const Contact = () => {
                       {loading ? "Sending..." : "Send Message"}
                     </p>
                     <div className="arrow-wrapper">
-                      <Image src="/images/arrow-down.svg" alt="arrow" width={20} height={20} />
+                      <Image
+                        src="/images/arrow-down.svg"
+                        alt="arrow"
+                        width={20}
+                        height={20}
+                      />
                     </div>
                   </div>
                 </button>
-                
-                {status === 'success' && (
+
+                {status === "success" && (
                   <p className="text-green-500 text-center font-medium mt-2">
                     Message sent successfully! I'll get back to you soon.
                   </p>
                 )}
-                {status === 'error' && (
+                {status === "error" && (
                   <p className="text-red-500 text-center font-medium mt-2">
                     Oops! Something went wrong. Please try again later.
                   </p>

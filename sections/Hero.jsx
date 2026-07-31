@@ -1,40 +1,46 @@
 "use client";
-import React from 'react';
-import Image from 'next/image';
-import Button from '../components/Button'
-import {words} from '../constants/index'
-import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import Animatedcounter from '../components/Animatedcounter'
-import Lazyloader from '../components/Lazyloader';
-
-
+import React from "react";
+import Image from "next/image";
+import Button from "../components/Button";
+import { words } from "../constants/index";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import Animatedcounter from "../components/Animatedcounter";
+import Lazyloader from "../components/Lazyloader";
 
 const Hero = () => {
-  useGSAP(()=> {
-    gsap.fromTo('.hero-text h1', {
-      y: 50,
-      opacity: 0,
-    },
-   {
-    y: 0,
-    opacity: 1,
-    stagger: 0.2,
-    duration: 1,
-    ease: 'power2.inout',
-   },
-  )
-  })
+  useGSAP(() => {
+    gsap.fromTo(
+      ".hero-text h1",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power2.inout",
+      },
+    );
+  });
   return (
-    <section id='hero' className='relative overflow-x-hidden'>
-        <div className="absolute top-0 left-0 z-10 w-full h-full">
-            <Image src="/images/bg.png" alt="background" width={418} height={327} className="object-cover" />
-        </div>
-        {/* <SplashCursor/> */}
-        <div className="hero-layout md:px-20 px-5">
-            <header className='flex flex-col justify-center md:w-full w-screen '>
-                <div className="flex flex-col gap-7">
-                <div className="hero-text">
+    <section id="hero" className="relative overflow-x-hidden">
+      <div className="absolute top-0 left-0 z-10 w-full h-full">
+        <Image
+          src="/images/bg.png"
+          alt="background"
+          width={418}
+          height={327}
+          className="object-cover"
+        />
+      </div>
+      {/* <SplashCursor/> */}
+      <div className="hero-layout md:px-20 px-5">
+        <header className="flex flex-col justify-center md:w-full w-screen ">
+          <div className="flex flex-col gap-7">
+            <div className="hero-text">
               <h1>
                 Shaping
                 <span className="slide">
@@ -60,31 +66,40 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-              <p className='text-white-50 md:text-xl relative z-10 pointer-none max-sm:pe-5'>Hi, i'm Teslim, a frontend developer based in Nigeria with <br className='hidden lg:block' /> a passion for coding</p>
-              <Button
+            <p className="text-white-50 md:text-xl relative z-10 pointer-none max-sm:pe-5">
+              Hi, i'm Teslim, a frontend developer based in Nigeria with{" "}
+              <br className="hidden lg:block" /> a passion for coding
+            </p>
+            <Button
               className="md:w-80 md:h-16 w-60 h-12"
               id="button"
               text="See My Work"
-              />
-                </div>
+              eventName="hero_cta"
+              eventLabel="see_my_work"
+            />
+          </div>
+        </header>
 
-
-            </header>
-            
-                {/* <div className='hero-3d-layout max-sm:mt-[55%] max-sm:pb-[50%]'>
+        {/* <div className='hero-3d-layout max-sm:mt-[55%] max-sm:pb-[50%]'>
                   <Suspense fallback={<Lazyloader />}>
                     <Robot />
                   </Suspense>
                 </div> */}
 
-                <div className='relative rounded-lg w-full lg:w-fit'>
-                  <div className="noisy"/>
-                  <Image src="/images/tess.png" alt="dev Tess" width={600} height={600} className='lg:w-150 w-full rounded-lg h-100 md:h-full lg:h-100 object-cover object-top' />
-                </div>
+        <div className="relative rounded-lg w-full lg:w-fit">
+          <div className="noisy" />
+          <Image
+            src="/images/tess.png"
+            alt="dev Tess"
+            width={600}
+            height={600}
+            className="lg:w-150 w-full rounded-lg h-100 md:h-full lg:h-100 object-cover object-top"
+          />
         </div>
-        <Animatedcounter/>
+      </div>
+      <Animatedcounter />
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

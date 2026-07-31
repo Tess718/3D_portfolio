@@ -1,39 +1,40 @@
 "use client";
-import React from 'react'
-import { useRef, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
-import TitleHeader from '../components/TitleHeader';
-import Image from 'next/image';
+import React from "react";
+import { useRef, useEffect } from "react";
+import { trackEvent } from "@vercel/analytics";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SplitType from "split-type";
+import TitleHeader from "../components/TitleHeader";
+import Image from "next/image";
 
 const Aboutme = () => {
-
-    const splitTypesRef = useRef([]);
+  const splitTypesRef = useRef([]);
 
   useEffect(() => {
     splitTypesRef.current.forEach((word) => {
-       const text = new SplitType(word, { types: 'words' });
-   
-       gsap.fromTo(text.words, {
-         opacity: 0.3, 
-       }, {
-         opacity: 1, 
-         scrollTrigger: {
-           trigger: word,
-           start: 'top 90%', 
-           end: 'bottom 50%', 
-           scrub: true,
-           markers: false,
-           immediateRender: false
-         },
-         stagger: 0.1
-       });
+      const text = new SplitType(word, { types: "words" });
+
+      gsap.fromTo(
+        text.words,
+        {
+          opacity: 0.3,
+        },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: word,
+            start: "top 90%",
+            end: "bottom 50%",
+            scrub: true,
+            markers: false,
+            immediateRender: false,
+          },
+          stagger: 0.1,
+        },
+      );
     });
-   }, []);
-   
-   
-   
+  }, []);
 
   return (
     <section id="about" className="px-5 md:px-20">
@@ -62,14 +63,25 @@ const Aboutme = () => {
               existing projects, or refining my portfolio.
             </p>
 
-            <a href="/Teslim-Liasu-Resume.pdf" download="">
+            <a
+              href="/Teslim-Liasu-Resume.pdf"
+              download=""
+              onClick={() =>
+                trackEvent("resume_download", { location: "about" })
+              }
+            >
               {/* <button className="text-black rounded-xl bg-white px-8 py-3 font-semibold cursor-pointer mt-10 hover:bg-[#2a2e2e] hover:text-white">Download Resume</button> */}
               <button>
                 <div className="cta-button group md:w-80 w-60 mt-10">
                   <div className="bg-circle" />
                   <p className="text max-sm:text-sm">Download Resume</p>
                   <div className="arrow-wrapper">
-                    <Image src="/images/arrow-down.svg" alt="arrow" width={100} height={100}  />
+                    <Image
+                      src="/images/arrow-down.svg"
+                      alt="arrow"
+                      width={100}
+                      height={100}
+                    />
                   </div>
                 </div>
               </button>
@@ -80,12 +92,14 @@ const Aboutme = () => {
               src="/images/circulartext.png"
               className="ml-auto animate-spin360"
               alt=""
-              width={194} height={197}  />
+              width={194}
+              height={197}
+            />
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default Aboutme
+export default Aboutme;
