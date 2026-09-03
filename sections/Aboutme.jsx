@@ -46,7 +46,7 @@ const Aboutme = () => {
               className="md:text-xl text-lg"
               ref={(el) => (splitTypesRef.current[0] = el)}
             >
-              I’m a frontend developer with over three years of experience
+              I’m a software engineer with over three years of experience
               building responsive, accessible, and user-focused web interfaces.
               I work mostly with JavaScript, React, Next.js, and Tailwind CSS,
               and I enjoy turning designs into clean, usable products that feel

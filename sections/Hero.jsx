@@ -67,7 +67,7 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-none max-sm:pe-5">
-              Hi, i'm Teslim, a frontend developer based in Nigeria with{" "}
+              Hi, i'm Teslim, a software engineer based in Nigeria with{" "}
               <br className="hidden lg:block" /> a passion for coding
             </p>
             <Button
