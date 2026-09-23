@@ -98,7 +98,7 @@ section {
   }
 
   .hero-layout {
-    @apply relative z-10 xl:mt-20 lg:mt-20 mt-32 md:mt-58 lg:py-25 max-sm:h-[80vh] flex xl:items-center items-start justify-center flex-col max-sm:pt-50 gap-20 lg:gap-0 lg:flex-row;
+    @apply relative z-10 xl:mt-20 lg:mt-20 mt-32 md:mt-58 lg:py-25 flex xl:items-center items-start justify-center flex-col gap-20 lg:gap-0 lg:flex-row;
   }
 
   .hero-text {
@@ -505,12 +505,16 @@ section {
 
 .sticky-card {
   position: relative;
-   background-color: var(--fg-sticky);
+  background-color: var(--fg-sticky);
   width: 100%;
   color: var(--bg-sticky);
-  display: flex;
-  gap: 3rem;
   will-change: transform;
+}
+
+@media (min-width: 1024px) {
+  .sticky-card {
+    height: 100svh;
+  }
 }
 
 /* .intro, .outro {

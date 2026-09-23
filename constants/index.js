@@ -168,6 +168,7 @@ const StickyCardsData = [
     image: "/images/project (13).png",
     description:
       "A cocktail website built with Next.js and GSAP, featuring scroll-triggered animations that balance performance and style, creating a smooth, playful experience that keeps visitors engaged while exploring content.",
+    tags: ["Next.js", "GSAP", "Tailwind CSS"],
     link: "https://tscocktails.netlify.app",
   },
   {
@@ -176,6 +177,7 @@ const StickyCardsData = [
     image: "/images/project (11).png",
     description:
       "A React.js website designed to market SEO services. Smooth, scroll-triggered animations highlight key offerings, creating an engaging flow that keeps visitors focused on value and encourages conversion.",
+    tags: ["React.js", "GSAP", "Tailwind CSS"],
     link: "https://devt-saas.netlify.app",
   },
   {
@@ -184,6 +186,7 @@ const StickyCardsData = [
     image: "/images/project.png",
     description:
       "A React.js and Appwrite web app using the TMDB API to browse, search, and save movies. Features include authentication, watchlists, recommendations, and a trending section powered by recurring searches.",
+    tags: ["React.js", "Appwrite", "TMDB API"],
     link: "https://tswatchables.netlify.app",
   },
   {
@@ -192,6 +195,7 @@ const StickyCardsData = [
     image: "/images/project (8).png",
     description:
       "A React.js website built to promote animation courses. Smooth, scroll-triggered animations guide visitors through the content, creating an engaging flow that reflects the creativity and energy of the subject.",
+    tags: ["React.js", "GSAP", "Tailwind CSS"],
     link: "https://animately.netlify.app",
   },
   {
@@ -200,6 +204,7 @@ const StickyCardsData = [
     image: "/images/project (14).png",
     description:
       "A React Router v7, Typescript and Puter.js app that scans resumes and provides actionable insights, helping users edit and improve their chances of landing job opportunities.",
+    tags: ["React Router v7", "TypeScript", "Puter.js"],
     link: "https://hire-sight.netlify.app",
   },
   {
@@ -208,6 +213,7 @@ const StickyCardsData = [
     image: "/images/project (15).png",
     description:
       "A Next.js, TypeScript, Payload CMS, and MongoDB-powered portfolio platform with ImageKit integration, featuring microinteractions and smooth animated scrolling to create an immersive, responsive experience for showcasing photography work.",
+    tags: ["Next.js", "TypeScript", "Payload CMS", "MongoDB", "ImageKit"],
     link: "https://theolaoluwa.vercel.app",
   },
   {
@@ -216,6 +222,7 @@ const StickyCardsData = [
     image: "/images/project (16).png",
     description:
       "A Next.js, TypeScript, and PostgreSQL-powered URL shortener with Redis caching and Auth.js authentication, featuring geo/device tracking and real-time click analytics.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Redis", "Auth.js"],
     link: "https://klixk.vercel.app",
   },
   {
@@ -224,6 +231,7 @@ const StickyCardsData = [
     image: "/images/project (17).png",
     description:
       "A Next.js, TypeScript, PostgreSQL, and Prisma-powered quiz platform with AI integration, featuring live multiplayer rooms, real-time leaderboards, and a bold neo-brutalist design system to create a competitive, gamified experience for creating and hosting quizzes.",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "AI"],
     link: "https://mentatry.vercel.app",
   },
 ];

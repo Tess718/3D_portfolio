@@ -62,7 +62,6 @@ const StickyCards = () => {
                       scale,
                       rotation,
                       "--after-opacity": afterOpacity,
-                      borderRadius: `${progress * 24}px`,
                     });
                   }
                 },
@@ -82,22 +81,65 @@ const StickyCards = () => {
       ref={container}
     >
       {StickyCardsData.map((cardData, index) => (
-        <div className="sticky-card md:p-20 p-4 lg:h-full h-svh" key={index}>
-          <div className="sticky-card-index lg:basis-[40%] py-13 lg:py-0">
-            <h1 className="lg:text-8xl text-4xl font-semibold">
-              ({cardData.index})
-            </h1>
-          </div>
-          <div className="sticky-card-content basis-[60%]">
-            <div className="sticky-card-content-wrapper">
-              <div className="flex items-center justify-between">
-                <h1 className="sticky-card-header lg:text-5xl text-2xl font-semibold">
-                  {cardData.title}
+        <div
+          className="sticky-card md:px-16 md:py-10 p-5 h-[650px] lg:h-svh flex items-center justify-center"
+          key={index}
+        >
+          <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-14 items-stretch justify-between">
+            {/* LEFT COLUMN: Number at top, Description + Tech Stack Tags grouped at bottom */}
+            <div className="lg:w-[45%] flex flex-col justify-between order-2 lg:order-1">
+              <div>
+                <h1 className="hidden lg:block lg:text-8xl text-4xl font-semibold tracking-tight">
+                  ({cardData.index})
                 </h1>
+              </div>
+
+              {/* Bottom group: Description + Tags */}
+              <div className="flex flex-col gap-4 mt-6 lg:mt-0">
+                <div className="space-y-2">
+                  <p className="text-xs uppercase tracking-wider font-semibold opacity-75">
+                    (About the Project)
+                  </p>
+                  <p className="text-sm lg:text-base leading-relaxed text-white-50 opacity-90">
+                    {cardData.description}
+                  </p>
+                </div>
+
+                {/* Tech Stack Tags with button radius (rounded-lg) */}
+                {cardData.tags && (
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {cardData.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="bg-[#2a2e2e] border border-[#3a3e3e] py-1.5 px-3 rounded-lg text-xs text-white-50"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* RIGHT COLUMN: Number (mobile) + Title row + Image Preview */}
+            <div className="lg:w-[55%] flex flex-col justify-between order-1 lg:order-2 gap-3 lg:gap-4">
+              {/* Number on top on mobile on its own line */}
+              <div className="lg:hidden">
+                <span className="text-2xl sm:text-3xl font-semibold tracking-tight opacity-75">
+                  ({cardData.index})
+                </span>
+              </div>
+
+              {/* Title row */}
+              <div className="flex items-center justify-between">
+                <h2 className="lg:text-4xl text-2xl font-semibold tracking-tight">
+                  {cardData.title}
+                </h2>
                 <a
                   href={cardData.link}
                   rel="noreferrer"
                   target="_blank"
+                  className="p-1 hover:scale-110 transition-transform"
                   onClick={() =>
                     track("project_link_click", {
                       project: cardData.title,
@@ -105,26 +147,19 @@ const StickyCards = () => {
                     })
                   }
                 >
-                  <ExternalLink />
+                  <ExternalLink className="size-5 lg:size-6" />
                 </a>
               </div>
 
-              <div className="sticky-card-image">
+              {/* Image strictly adhering to the 5/3 aspect ratio */}
+              <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-[#3a3e3e]">
                 <Image
                   src={cardData.image}
-                  alt="project image"
-                  className="rounded-lg"
+                  alt={cardData.title}
+                  className="rounded-xl object-cover"
                   fill
+                  sizes="(max-width: 768px) 100vw, 55vw"
                 />
-              </div>
-
-              <div className="sticky-card-copy ">
-                <div className="sticky-card-copy-title">
-                  <p>(About the Project)</p>
-                </div>
-                <div className="sticky-card-copy-description">
-                  <p>{cardData.description}</p>
-                </div>
               </div>
             </div>
           </div>
