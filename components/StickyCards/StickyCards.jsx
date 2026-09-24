@@ -82,7 +82,7 @@ const StickyCards = () => {
     >
       {StickyCardsData.map((cardData, index) => (
         <div
-          className="sticky-card md:px-16 md:py-10 p-5 h-[650px] lg:h-svh flex items-center justify-center"
+          className="sticky-card md:px-16 md:py-10 p-5 h-[650px] md:h-svh flex items-center justify-center"
           key={index}
         >
           <div className="w-full max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-14 items-stretch justify-between">
